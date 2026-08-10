@@ -48,9 +48,8 @@
   :focus-visible{outline:2px solid var(--gold);outline-offset:3px;}
 
   /* language toggle visibility */
-  html[data-lang="es"] .t-en, html[data-lang="es"] .t-lv{display:none;}
-  html[data-lang="en"] .t-es, html[data-lang="en"] .t-lv{display:none;}
-  html[data-lang="lv"] .t-es, html[data-lang="lv"] .t-en{display:none;}
+  html[data-lang="es"] .t-en{display:none;}
+  html[data-lang="en"] .t-es{display:none;}
 
   @media (prefers-reduced-motion: reduce){
     *{animation-duration:0.01ms !important; animation-iteration-count:1 !important; transition-duration:0.01ms !important;}
@@ -299,7 +298,7 @@
 
   /* GPS experiment section */
   .video-frame{
-    margin-top:8px;border-radius:8px;overflow:hidden;border:1px solid var(--line-strong);
+    margin:8px auto 0;border-radius:8px;overflow:hidden;border:1px solid var(--line-strong);
     background:var(--panel);max-width:640px;
   }
   .video-frame video{width:100%;display:block;background:#000;}
@@ -310,7 +309,7 @@
   .gps-qr-row{
     display:grid;grid-template-columns:auto 1fr;gap:24px;align-items:center;
     background:var(--panel);border:1px solid var(--line-strong);border-radius:8px;padding:26px;
-    margin-top:36px;max-width:640px;
+    margin:36px auto 0;max-width:640px;
   }
   @media (max-width:600px){ .gps-qr-row{grid-template-columns:1fr;justify-items:center;text-align:center;} }
   .gps-qr-box{width:110px;height:110px;background:#fff;border-radius:6px;padding:6px;flex-shrink:0;}
@@ -347,19 +346,18 @@
   <div class="nav-inner">
     <a href="#top" class="wordmark">TOTALIDAD<span class="dot">·</span>2026<small>LUNEX / EuroMoonMars</small></a>
     <nav class="links">
-      <a href="#fenomeno"><span class="t-es">El fenómeno</span><span class="t-en">The phenomenon</span><span class="t-lv">Fenomens</span></a>
-      <a href="#corona"><span class="t-es">La corona</span><span class="t-en">The corona</span><span class="t-lv">Korona</span></a>
+      <a href="#fenomeno"><span class="t-es">El fenómeno</span><span class="t-en">The phenomenon</span></a>
+      <a href="#corona"><span class="t-es">La corona</span><span class="t-en">The corona</span></a>
       <a href="#eddington">Eddington-Einstein</a>
       <a href="#gps">GPS</a>
-      <a href="#experimentos"><span class="t-es">Experimentos</span><span class="t-en">Experiments</span><span class="t-lv">Eksperimenti</span></a>
-      <a href="#seguridad"><span class="t-es">Seguridad</span><span class="t-en">Safety</span><span class="t-lv">Drošība</span></a>
-      <a href="#evento"><span class="t-es">El evento</span><span class="t-en">The event</span><span class="t-lv">Pasākums</span></a>
+      <a href="#experimentos"><span class="t-es">Experimentos</span><span class="t-en">Experiments</span></a>
+      <a href="#seguridad"><span class="t-es">Seguridad</span><span class="t-en">Safety</span></a>
+      <a href="#evento"><span class="t-es">El evento</span><span class="t-en">The event</span></a>
     </nav>
     <div class="nav-right">
       <div class="lang-switch" role="group" aria-label="Language">
         <button data-lang-btn="es" onclick="setLang('es')" class="active">ES</button>
         <button data-lang-btn="en" onclick="setLang('en')">EN</button>
-        <button data-lang-btn="lv" onclick="setLang('lv')">LV</button>
       </div>
     </div>
   </div>
@@ -371,17 +369,17 @@
   <section class="hero" style="padding-bottom:70px;border-bottom:1px solid var(--line);">
     <div class="wrap hero-grid">
       <div>
-        <span class="eyebrow"><span class="t-es">12 de agosto de 2026 · Península Ibérica</span><span class="t-en">August 12, 2026 · Iberian Peninsula</span><span class="t-lv">2026. gada 12. augusts · Ibērijas pussala</span></span>
+        <span class="eyebrow"><span class="t-es">12 de agosto de 2026 · Península Ibérica</span><span class="t-en">August 12, 2026 · Iberian Peninsula</span></span>
         <h1>
           <span class="t-es">El día se hará <em>noche</em> durante un minuto.</span>
-          <span class="t-en">Day will turn to <em>night</em> for one minute.</span><span class="t-lv">Diena uz vienu minūti kļūs par <em>nakti</em>.</span>
+          <span class="t-en">Day will turn to <em>night</em> for one minute.</span>
         </h1>
         <p class="lead">
           <span class="t-es">El primer eclipse solar total visible desde España en más de un siglo. Un equipo internacional de investigadores estará sobre el terreno para observarlo, medirlo — y explicarlo.</span>
-          <span class="t-en">The first total solar eclipse visible from Spain in over a century. An international research team will be on the ground to observe it, measure it — and explain it.</span><span class="t-lv">Pirmais pilnais Saules aptumsums, kas redzams no Spānijas vairāk nekā simts gadu laikā. Starptautiska pētnieku komanda būs uz vietas, lai to novērotu, mērītu — un izskaidrotu.</span>
+          <span class="t-en">The first total solar eclipse visible from Spain in over a century. An international research team will be on the ground to observe it, measure it — and explain it.</span>
         </p>
         <div class="hero-ctas">
-          <a href="#fenomeno" class="btn btn-primary"><span class="t-es">Entender el eclipse</span><span class="t-en">Understand the eclipse</span><span class="t-lv">Uzzini par aptumsumu</span></a>
+          <a href="#fenomeno" class="btn btn-primary"><span class="t-es">Entender el eclipse</span><span class="t-en">Understand the eclipse</span></a>
         </div>
       </div>
 
@@ -413,16 +411,16 @@
         </style>
 
         <div class="countdown" style="margin-top:26px;">
-          <span class="cd-label"><span class="t-es">Cuenta atrás hasta la totalidad</span><span class="t-en">Countdown to totality</span><span class="t-lv">Atskaite līdz pilnīgajai fāzei</span></span>
+          <span class="cd-label"><span class="t-es">Cuenta atrás hasta la totalidad</span><span class="t-en">Countdown to totality</span></span>
           <div class="cd-numbers" id="countdownNumbers">
-            <div class="cd-cell"><span class="n" id="cdDays">–</span><span class="u"><span class="t-es">días</span><span class="t-en">days</span><span class="t-lv">dienas</span></span></div>
-            <div class="cd-cell"><span class="n" id="cdHours">–</span><span class="u"><span class="t-es">horas</span><span class="t-en">hrs</span><span class="t-lv">st.</span></span></div>
-            <div class="cd-cell"><span class="n" id="cdMins">–</span><span class="u"><span class="t-es">min</span><span class="t-en">min</span><span class="t-lv">min</span></span></div>
-            <div class="cd-cell"><span class="n" id="cdSecs">–</span><span class="u"><span class="t-es">seg</span><span class="t-en">sec</span><span class="t-lv">sek</span></span></div>
+            <div class="cd-cell"><span class="n" id="cdDays">–</span><span class="u"><span class="t-es">días</span><span class="t-en">days</span></span></div>
+            <div class="cd-cell"><span class="n" id="cdHours">–</span><span class="u"><span class="t-es">horas</span><span class="t-en">hrs</span></span></div>
+            <div class="cd-cell"><span class="n" id="cdMins">–</span><span class="u"><span class="t-es">min</span><span class="t-en">min</span></span></div>
+            <div class="cd-cell"><span class="n" id="cdSecs">–</span><span class="u"><span class="t-es">seg</span><span class="t-en">sec</span></span></div>
           </div>
           <div class="cd-meta">
             <span class="t-es">Totalidad aprox. <strong>20:28–20:31h</strong>, hora peninsular · zona de observación: <strong>Arguedas, Navarra</strong></span>
-            <span class="t-en">Totality approx. <strong>20:28–20:31 CEST</strong> · observation site: <strong>Arguedas, Navarra (Spain)</strong></span><span class="t-lv">Pilnīgā fāze aptuveni <strong>20:28–20:31 (CEST)</strong> · novērošanas vieta: <strong>Arguedas, Navarra (Spānija)</strong></span>
+            <span class="t-en">Totality approx. <strong>20:28–20:31 CEST</strong> · observation site: <strong>Arguedas, Navarra (Spain)</strong></span>
           </div>
         </div>
       </div>
@@ -433,12 +431,12 @@
   <section id="fenomeno">
     <div class="wrap">
       <div class="section-head">
-        <span class="label">01 — <span class="t-es">El fenómeno</span><span class="t-en">The phenomenon</span><span class="t-lv">Fenomens</span></span>
+        <span class="label">01 — <span class="t-es">El fenómeno</span><span class="t-en">The phenomenon</span></span>
         <div>
-          <h2><span class="t-es">Una casualidad geométrica de 400 a 1</span><span class="t-en">A 400-to-1 geometric coincidence</span><span class="t-lv">Ģeometriska sagadīšanās 400 pret 1</span></h2>
+          <h2><span class="t-es">Una casualidad geométrica de 400 a 1</span><span class="t-en">A 400-to-1 geometric coincidence</span></h2>
           <p class="section-intro">
             <span class="t-es">Un eclipse solar total ocurre cuando la Luna se sitúa exactamente entre el Sol y la Tierra, proyectando su sombra más oscura —la umbra— sobre una franja estrecha de la superficie terrestre.</span>
-            <span class="t-en">A total solar eclipse happens when the Moon sits exactly between the Sun and Earth, casting its darkest shadow — the umbra — onto a narrow strip of the Earth's surface.</span><span class="t-lv">Pilns Saules aptumsums notiek, kad Mēness atrodas tieši starp Sauli un Zemi, metot savu tumšāko ēnu — umbru — uz šauru Zemes virsmas joslu.</span>
+            <span class="t-en">A total solar eclipse happens when the Moon sits exactly between the Sun and Earth, casting its darkest shadow — the umbra — onto a narrow strip of the Earth's surface.</span>
           </p>
         </div>
       </div>
@@ -446,24 +444,24 @@
       <div class="mech-grid">
         <div class="fact-list">
           <div class="fact">
-            <h3><span class="t-es">Un tamaño aparente casi idéntico</span><span class="t-en">A near-identical apparent size</span><span class="t-lv">Gandrīz vienāds šķietamais izmērs</span></h3>
+            <h3><span class="t-es">Un tamaño aparente casi idéntico</span><span class="t-en">A near-identical apparent size</span></h3>
             <p><span class="t-es">El Sol es ~400 veces más grande que la Luna, pero también está ~400 veces más lejos. Vistos desde la Tierra, ambos ocupan casi el mismo tamaño angular en el cielo — la razón por la que la Luna puede tapar el Sol casi a la perfección.</span>
-               <span class="t-en">The Sun is ~400 times larger than the Moon, but also ~400 times farther away. Seen from Earth, both occupy almost the same angular size in the sky — the reason the Moon can cover the Sun almost perfectly.</span><span class="t-lv">Saule ir ~400 reižu lielāka par Mēnesi, taču arī ~400 reižu tālāka. Raugoties no Zemes, abi debesīs aizņem gandrīz vienādu leņķisko izmēru — tāpēc Mēness var gandrīz perfekti aizsegt Sauli.</span></p>
+               <span class="t-en">The Sun is ~400 times larger than the Moon, but also ~400 times farther away. Seen from Earth, both occupy almost the same angular size in the sky — the reason the Moon can cover the Sun almost perfectly.</span></p>
           </div>
           <div class="fact">
-            <h3><span class="t-es">¿Por qué no hay un eclipse cada mes?</span><span class="t-en">Why not an eclipse every month?</span><span class="t-lv">Kāpēc aptumsums nenotiek katru mēnesi?</span></h3>
+            <h3><span class="t-es">¿Por qué no hay un eclipse cada mes?</span><span class="t-en">Why not an eclipse every month?</span></h3>
             <p><span class="t-es">La órbita lunar está inclinada unos 5° respecto al plano en que la Tierra orbita el Sol. Solo cuando las tres se alinean en ese plano —un par de veces al año— es posible un eclipse.</span>
-               <span class="t-en">The Moon's orbit is tilted about 5° relative to the plane in which Earth orbits the Sun. Only when all three align within that plane — a couple of times a year — can an eclipse occur.</span><span class="t-lv">Mēness orbīta ir sasvērta apmēram 5° pret plakni, kurā Zeme riņķo ap Sauli. Aptumsums iespējams tikai tad, kad visi trīs ķermeņi sakrīt šajā plaknē — dažas reizes gadā.</span></p>
+               <span class="t-en">The Moon's orbit is tilted about 5° relative to the plane in which Earth orbits the Sun. Only when all three align within that plane — a couple of times a year — can an eclipse occur.</span></p>
           </div>
           <div class="fact">
-            <h3><span class="t-es">Umbra y penumbra</span><span class="t-en">Umbra and penumbra</span><span class="t-lv">Umbra un penumbra</span></h3>
+            <h3><span class="t-es">Umbra y penumbra</span><span class="t-en">Umbra and penumbra</span></h3>
             <p><span class="t-es">La sombra lunar tiene dos partes: la umbra, donde el eclipse se ve total, y la penumbra —mucho más ancha— donde se ve solo parcial. La franja de totalidad de 2026 recorrerá España de A Coruña a Baleares.</span>
-               <span class="t-en">The lunar shadow has two parts: the umbra, where the eclipse appears total, and the penumbra — much wider — where it appears only partial. The 2026 path of totality crosses Spain from A Coruña to the Balearic Islands.</span><span class="t-lv">Mēness ēnai ir divas daļas: umbra, kur aptumsums izskatās pilns, un penumbra — daudz platāka —, kur redzams tikai daļējs aptumsums. 2026. gada pilnīgās fāzes josla šķērsos Spāniju no A Coruņas līdz Baleāru salām.</span></p>
+               <span class="t-en">The lunar shadow has two parts: the umbra, where the eclipse appears total, and the penumbra — much wider — where it appears only partial. The 2026 path of totality crosses Spain from A Coruña to the Balearic Islands.</span></p>
           </div>
           <div class="fact">
-            <h3><span class="t-es">Una ventana que se cierra</span><span class="t-en">A closing window</span><span class="t-lv">Aizverošies logs</span></h3>
+            <h3><span class="t-es">Una ventana que se cierra</span><span class="t-en">A closing window</span></h3>
             <p><span class="t-es">La Luna se aleja de la Tierra ~3.8 cm por año. Dentro de cientos de millones de años, será demasiado pequeña en el cielo para producir eclipses totales — los estamos viendo en la época correcta del universo.</span>
-               <span class="t-en">The Moon drifts away from Earth ~3.8 cm per year. In hundreds of millions of years it will appear too small in the sky to produce total eclipses — we're watching at the right moment in cosmic time.</span><span class="t-lv">Mēness attālinās no Zemes ~3,8 cm gadā. Pēc simtiem miljonu gadu tas debesīs būs par mazu, lai radītu pilnus aptumsumus — mēs tos vērojam tieši īstajā Visuma laikā.</span></p>
+               <span class="t-en">The Moon drifts away from Earth ~3.8 cm per year. In hundreds of millions of years it will appear too small in the sky to produce total eclipses — we're watching at the right moment in cosmic time.</span></p>
           </div>
         </div>
 
@@ -489,46 +487,46 @@
   <section class="alt-bg">
     <div class="wrap">
       <div class="section-head">
-        <span class="label">02 — <span class="t-es">Cronología</span><span class="t-en">Timeline</span><span class="t-lv">Hronoloģija</span></span>
+        <span class="label">02 — <span class="t-es">Cronología</span><span class="t-en">Timeline</span></span>
         <div>
-          <h2><span class="t-es">Lo que van a ver, minuto a minuto</span><span class="t-en">What you'll see, minute by minute</span><span class="t-lv">Ko jūs redzēsiet, minūti pa minūtei</span></h2>
+          <h2><span class="t-es">Lo que van a ver, minuto a minuto</span><span class="t-en">What you'll see, minute by minute</span></h2>
           <p class="section-intro">
             <span class="t-es">El eclipse completo dura poco más de dos horas. La totalidad —el momento en que es seguro mirar sin protección— dura apenas un minuto.</span>
-            <span class="t-en">The full eclipse lasts just over two hours. Totality — the moment it's safe to look without protection — lasts barely a minute.</span><span class="t-lv">Viss aptumsums ilgst nedaudz vairāk par divām stundām. Pilnīgā fāze — brīdis, kad droši var skatīties bez aizsardzības — ilgst tikai vienu minūti.</span>
+            <span class="t-en">The full eclipse lasts just over two hours. Totality — the moment it's safe to look without protection — lasts barely a minute.</span>
           </p>
         </div>
       </div>
 
       <div class="timeline">
         <div class="tl-item">
-          <div class="tl-tag"><span class="t-es">Primer contacto</span><span class="t-en">First contact</span><span class="t-lv">Pirmais kontakts</span></div>
-          <div><h3><span class="t-es">La Luna empieza a morder el disco solar</span><span class="t-en">The Moon begins to bite into the solar disc</span><span class="t-lv">Mēness sāk “iekost” Saules diskā</span></h3>
-          <p><span class="t-es">Apenas perceptible a simple vista. Con gafas certificadas, se ve una pequeña muesca oscura aparecer en el borde del Sol.</span><span class="t-en">Barely noticeable to the naked eye. With certified glasses, a small dark notch appears on the Sun's edge.</span><span class="t-lv">Ar neapbruņotu aci gandrīz nemanāms. Ar sertificētām brillēm redzama neliela tumša iedobe Saules malā.</span></p></div>
+          <div class="tl-tag"><span class="t-es">Primer contacto</span><span class="t-en">First contact</span></div>
+          <div><h3><span class="t-es">La Luna empieza a morder el disco solar</span><span class="t-en">The Moon begins to bite into the solar disc</span></h3>
+          <p><span class="t-es">Apenas perceptible a simple vista. Con gafas certificadas, se ve una pequeña muesca oscura aparecer en el borde del Sol.</span><span class="t-en">Barely noticeable to the naked eye. With certified glasses, a small dark notch appears on the Sun's edge.</span></p></div>
         </div>
         <div class="tl-item">
-          <div class="tl-tag"><span class="t-es">Fase parcial · ~1h</span><span class="t-en">Partial phase · ~1h</span><span class="t-lv">Daļējā fāze · ~1h</span></div>
-          <div><h3><span class="t-es">La luz se atenúa, casi sin notarlo</span><span class="t-en">The light dims, almost imperceptibly</span><span class="t-lv">Gaisma kļūst blāvāka, gandrīz nemanāmi</span></h3>
-          <p><span class="t-es">El ojo humano se adapta muy bien: el día sigue pareciendo normal hasta que la cobertura del Sol es muy alta.</span><span class="t-en">The human eye adapts remarkably well: daylight still looks normal until coverage of the Sun is very high.</span><span class="t-lv">Cilvēka acs pielāgojas ļoti labi: diena joprojām šķiet parasta, kamēr Saules aizsegums nav ļoti liels.</span></p></div>
+          <div class="tl-tag"><span class="t-es">Fase parcial · ~1h</span><span class="t-en">Partial phase · ~1h</span></div>
+          <div><h3><span class="t-es">La luz se atenúa, casi sin notarlo</span><span class="t-en">The light dims, almost imperceptibly</span></h3>
+          <p><span class="t-es">El ojo humano se adapta muy bien: el día sigue pareciendo normal hasta que la cobertura del Sol es muy alta.</span><span class="t-en">The human eye adapts remarkably well: daylight still looks normal until coverage of the Sun is very high.</span></p></div>
         </div>
         <div class="tl-item">
-          <div class="tl-tag"><span class="t-es">Minutos antes</span><span class="t-en">Minutes before</span><span class="t-lv">Pēdējās minūtes</span></div>
-          <div><h3><span class="t-es">La luz cambia de color, la temperatura baja</span><span class="t-en">The light shifts color, temperature drops</span><span class="t-lv">Gaisma maina krāsu, temperatūra krītas</span></h3>
-          <p><span class="t-es">Un gris metálico distinto a cualquier atardecer. Los pájaros dejan de cantar. Pueden aparecer bandas de sombra: ondas tenues de luz y oscuridad sobre superficies claras.</span><span class="t-en">A metallic grey unlike any sunset. Birds stop singing. Faint shadow bands — ripples of light and dark — may appear on pale surfaces.</span><span class="t-lv">Metāliski pelēks tonis, kas atšķiras no jebkura saulrieta. Putni pārstāj dziedāt. Uz gaišām virsmām var parādīties ēnu joslas — vāji gaismas un tumsas viļņojumi.</span></p></div>
+          <div class="tl-tag"><span class="t-es">Minutos antes</span><span class="t-en">Minutes before</span></div>
+          <div><h3><span class="t-es">La luz cambia de color, la temperatura baja</span><span class="t-en">The light shifts color, temperature drops</span></h3>
+          <p><span class="t-es">Un gris metálico distinto a cualquier atardecer. Los pájaros dejan de cantar. Pueden aparecer bandas de sombra: ondas tenues de luz y oscuridad sobre superficies claras.</span><span class="t-en">A metallic grey unlike any sunset. Birds stop singing. Faint shadow bands — ripples of light and dark — may appear on pale surfaces.</span></p></div>
         </div>
         <div class="tl-item">
-          <div class="tl-tag"><span class="t-es">Segundo contacto</span><span class="t-en">Second contact</span><span class="t-lv">Otrais kontakts</span></div>
-          <div><h3><span class="t-es">Anillo de diamante y perlas de Baily</span><span class="t-en">Diamond ring and Baily's beads</span><span class="t-lv">Dimanta gredzens un Beilija pērles</span></h3>
-          <p><span class="t-es">El último destello de luz solar directa, seguido de puntos brillantes que se filtran por los valles del borde lunar.</span><span class="t-en">The last flash of direct sunlight, followed by bright points filtering through the valleys of the Moon's edge.</span><span class="t-lv">Pēdējais tiešās saules gaismas uzliesmojums, kam seko spilgti punkti, kas izspīd caur Mēness malas ielejām.</span></p></div>
+          <div class="tl-tag"><span class="t-es">Segundo contacto</span><span class="t-en">Second contact</span></div>
+          <div><h3><span class="t-es">Anillo de diamante y perlas de Baily</span><span class="t-en">Diamond ring and Baily's beads</span></h3>
+          <p><span class="t-es">El último destello de luz solar directa, seguido de puntos brillantes que se filtran por los valles del borde lunar.</span><span class="t-en">The last flash of direct sunlight, followed by bright points filtering through the valleys of the Moon's edge.</span></p></div>
         </div>
         <div class="tl-item totality">
-          <div class="tl-tag"><span class="t-es">Totalidad · ~1 min</span><span class="t-en">Totality · ~1 min</span><span class="t-lv">Pilnīgā fāze · ~1 min</span></div>
-          <div><h3><span class="t-es">Gafas fuera — solo ahora es seguro</span><span class="t-en">Glasses off — only now is it safe</span><span class="t-lv">Brilles nost — tikai tagad tas ir droši</span></h3>
-          <p><span class="t-es">La corona solar se hace visible. Pueden verse estrellas y planetas en pleno día. El horizonte se ve como un atardecer de 360°. El equipo científico indicará en voz alta cuándo es seguro y cuándo hay que volver a protegerse.</span><span class="t-en">The solar corona becomes visible. Stars and planets may appear in daylight. The horizon looks like a 360° sunset. The science team will call out loud when it's safe and when to re-protect your eyes.</span><span class="t-lv">Kļūst redzama Saules korona. Var būt redzamas zvaigznes un planētas gaišā dienā. Horizonts izskatās kā 360° saulriets. Zinātniskā komanda skaļi paziņos, kad ir droši un kad atkal jāaizsargā acis.</span></p></div>
+          <div class="tl-tag"><span class="t-es">Totalidad · ~1 min</span><span class="t-en">Totality · ~1 min</span></div>
+          <div><h3><span class="t-es">Gafas fuera — solo ahora es seguro</span><span class="t-en">Glasses off — only now is it safe</span></h3>
+          <p><span class="t-es">La corona solar se hace visible. Pueden verse estrellas y planetas en pleno día. El horizonte se ve como un atardecer de 360°. El equipo científico indicará en voz alta cuándo es seguro y cuándo hay que volver a protegerse.</span><span class="t-en">The solar corona becomes visible. Stars and planets may appear in daylight. The horizon looks like a 360° sunset. The science team will call out loud when it's safe and when to re-protect your eyes.</span></p></div>
         </div>
         <div class="tl-item">
-          <div class="tl-tag"><span class="t-es">Tercer contacto en adelante</span><span class="t-en">Third contact onward</span><span class="t-lv">No trešā kontakta</span></div>
-          <div><h3><span class="t-es">Vuelve el Sol, la Luna se retira</span><span class="t-en">The Sun returns, the Moon retreats</span><span class="t-lv">Saule atgriežas, Mēness atkāpjas</span></h3>
-          <p><span class="t-es">El anillo de diamante reaparece — gafas puestas de inmediato. La fase parcial de salida dura otra hora aproximadamente, y en España el eclipse terminará ya con el Sol muy bajo, cerca del ocaso.</span><span class="t-en">The diamond ring reappears — glasses back on immediately. The exit partial phase lasts about another hour, and in Spain the eclipse ends with the Sun very low, near sunset.</span><span class="t-lv">Dimanta gredzens parādās atkal — nekavējoties uzlieciet brilles. Izejas daļējā fāze ilgst vēl apmēram stundu, un Spānijā aptumsums beigsies, Saulei jau esot ļoti zemu, tuvu saulrietam.</span></p></div>
+          <div class="tl-tag"><span class="t-es">Tercer contacto en adelante</span><span class="t-en">Third contact onward</span></div>
+          <div><h3><span class="t-es">Vuelve el Sol, la Luna se retira</span><span class="t-en">The Sun returns, the Moon retreats</span></h3>
+          <p><span class="t-es">El anillo de diamante reaparece — gafas puestas de inmediato. La fase parcial de salida dura otra hora aproximadamente, y en España el eclipse terminará ya con el Sol muy bajo, cerca del ocaso.</span><span class="t-en">The diamond ring reappears — glasses back on immediately. The exit partial phase lasts about another hour, and in Spain the eclipse ends with the Sun very low, near sunset.</span></p></div>
         </div>
       </div>
     </div>
@@ -538,26 +536,26 @@
   <section id="corona">
     <div class="wrap corona-grid">
       <div>
-        <span class="label">03 — <span class="t-es">La protagonista</span><span class="t-en">The protagonist</span><span class="t-lv">Galvenā varone</span></span>
-        <h2 style="margin-top:14px;"><span class="t-es">La corona solar</span><span class="t-en">The solar corona</span><span class="t-lv">Saules korona</span></h2>
+        <span class="label">03 — <span class="t-es">La protagonista</span><span class="t-en">The protagonist</span></span>
+        <h2 style="margin-top:14px;"><span class="t-es">La corona solar</span><span class="t-en">The solar corona</span></h2>
         <p style="color:#CBCCD8;margin-top:18px;">
           <span class="t-es">Es la atmósfera exterior del Sol: invisible en condiciones normales porque el disco solar es un millón de veces más brillante. Solo durante la totalidad se revela — millones de kilómetros de plasma extendiéndose hacia el espacio.</span>
-          <span class="t-en">The Sun's outer atmosphere: invisible under normal conditions because the solar disc is a million times brighter. Only during totality is it revealed — millions of kilometers of plasma extending into space.</span><span class="t-lv">Tā ir Saules ārējā atmosfēra: parastos apstākļos neredzama, jo Saules disks ir miljonu reižu spožāks. Tā atklājas tikai pilnīgās fāzes laikā — miljoniem kilometru plazmas, kas stiepjas kosmosā.</span>
+          <span class="t-en">The Sun's outer atmosphere: invisible under normal conditions because the solar disc is a million times brighter. Only during totality is it revealed — millions of kilometers of plasma extending into space.</span>
         </p>
         <div class="stat-row">
-          <div class="stat"><div class="n">&gt;1M°C</div><div class="l"><span class="t-es">Temperatura coronal</span><span class="t-en">Coronal temperature</span><span class="t-lv">Koronas temperatūra</span></div></div>
-          <div class="stat"><div class="n">5,500°C</div><div class="l"><span class="t-es">Superficie solar</span><span class="t-en">Solar surface</span><span class="t-lv">Saules virsma</span></div></div>
-          <div class="stat"><div class="n">11 <span class="t-es">años</span><span class="t-en">yrs</span><span class="t-lv">gadi</span></div><div class="l"><span class="t-es">Ciclo de actividad</span><span class="t-en">Activity cycle</span><span class="t-lv">Aktivitātes cikls</span></div></div>
+          <div class="stat"><div class="n">&gt;1M°C</div><div class="l"><span class="t-es">Temperatura coronal</span><span class="t-en">Coronal temperature</span></div></div>
+          <div class="stat"><div class="n">5,500°C</div><div class="l"><span class="t-es">Superficie solar</span><span class="t-en">Solar surface</span></div></div>
+          <div class="stat"><div class="n">11 <span class="t-es">años</span><span class="t-en">yrs</span></div><div class="l"><span class="t-es">Ciclo de actividad</span><span class="t-en">Activity cycle</span></div></div>
         </div>
       </div>
       <div>
         <p style="color:#B9BBC9;font-size:0.94rem;">
           <span class="t-es">Que la corona sea muchísimo más caliente que la superficie del Sol que está debajo es uno de los grandes misterios abiertos de la física solar. Su forma —simétrica o con largos penachos irregulares (streamers)— cambia con el ciclo solar de 11 años.</span>
-          <span class="t-en">The fact that the corona is far hotter than the solar surface beneath it is one of solar physics' great open mysteries. Its shape — symmetric, or with long irregular streamers — changes across the Sun's 11-year activity cycle.</span><span class="t-lv">Tas, ka korona ir daudz karstāka par Saules virsmu zem tās, ir viena no lielajām neatrisinātajām Saules fizikas mīklām. Tās forma — simetriska vai ar gariem neregulāriem izstarojumiem — mainās līdz ar 11 gadu Saules aktivitātes ciklu.</span>
+          <span class="t-en">The fact that the corona is far hotter than the solar surface beneath it is one of solar physics' great open mysteries. Its shape — symmetric, or with long irregular streamers — changes across the Sun's 11-year activity cycle.</span>
         </p>
         <p style="color:#B9BBC9;font-size:0.94rem;margin-top:16px;">
-          <span class="t-es"><strong style="color:var(--corona);">Lo que hacemos:</strong> capturamos la corona con dos configuraciones — alta resolución hasta ~1.5 radios solares, y campo amplio hasta ~3-4 radios — para estudiar su estructura y compararla con modelos físicos.</span>
-          <span class="t-en"><strong style="color:var(--corona);">What we do:</strong> we capture the corona in two configurations — high resolution out to ~1.5 solar radii, and wide field out to ~3-4 radii — to study its structure and compare it against physical models.</span><span class="t-lv"><strong style="color:var(--corona);">Ko mēs darām:</strong> mēs fotografējam koronu divos režīmos — augstas izšķirtspējas attēlu līdz ~1,5 Saules rādiusiem un plaša skata attēlu līdz ~3-4 rādiusiem —, lai pētītu tās struktūru un salīdzinātu ar fizikāliem modeļiem.</span>
+          <span class="t-es"><strong style="color:var(--corona);">Lo que hacemos:</strong> capturamos la corona con dos configuraciones — alta resolución hasta ~1.5 radios solares, y campo amplio hasta ~5 radios — para estudiar su estructura y compararla con modelos físicos.</span>
+          <span class="t-en"><strong style="color:var(--corona);">What we do:</strong> we capture the corona in two configurations — high resolution out to ~1.5 solar radii, and wide field out to ~5 radii — to study its structure and compare it against physical models.</span>
         </p>
       </div>
     </div>
@@ -567,9 +565,9 @@
   <section id="eddington" class="alt-bg">
     <div class="wrap">
       <div class="section-head">
-        <span class="label">04 — <span class="t-es">Física en directo</span><span class="t-en">Physics, live</span><span class="t-lv">Fizika tiešraidē</span></span>
+        <span class="label">04 — <span class="t-es">Física en directo</span><span class="t-en">Physics, live</span></span>
         <div>
-          <h2><span class="t-es">El experimento que confirmó a Einstein</span><span class="t-en">The experiment that confirmed Einstein</span><span class="t-lv">Eksperiments, kas apstiprināja Einšteinu</span></h2>
+          <h2><span class="t-es">El experimento que confirmó a Einstein</span><span class="t-en">The experiment that confirmed Einstein</span></h2>
         </div>
       </div>
 
@@ -577,22 +575,22 @@
         <div>
           <blockquote class="quote">
             <span class="t-es">"En 1919, un eclipse total permitió medir por primera vez cómo la gravedad del Sol desvía la luz de las estrellas — confirmando la Relatividad General y convirtiendo a Einstein en el científico más famoso del mundo."</span>
-            <span class="t-en">"In 1919, a total eclipse allowed the first measurement of how the Sun's gravity bends starlight — confirming General Relativity and making Einstein the world's most famous scientist."</span><span class="t-lv">“1919. gadā pilns Saules aptumsums pirmo reizi ļāva izmērīt, kā Saules gravitācija noliec zvaigžņu gaismu — apstiprinot Vispārīgo relativitātes teoriju un padarot Einšteinu par pasaulē slavenāko zinātnieku.”</span>
-            <cite><span class="t-es">Expedición de Arthur Eddington, isla de Príncipe, 1919</span><span class="t-en">Arthur Eddington's expedition, Príncipe Island, 1919</span><span class="t-lv">Artura Edingtona ekspedīcija, Prinsipi sala, 1919. gads</span></cite>
+            <span class="t-en">"In 1919, a total eclipse allowed the first measurement of how the Sun's gravity bends starlight — confirming General Relativity and making Einstein the world's most famous scientist."</span>
+            <cite><span class="t-es">Expedición de Arthur Eddington, isla de Príncipe, 1919</span><span class="t-en">Arthur Eddington's expedition, Príncipe Island, 1919</span></cite>
           </blockquote>
           <p style="color:#B9BBC9;font-size:0.94rem;">
-            <span class="t-es">Más de un siglo después, nuestro equipo repite una versión moderna del experimento: fotografiando estrellas a menos de 2 radios solares del borde durante la totalidad, y comparando sus posiciones aparentes con catálogos astrométricos de precisión —como Gaia— muchísimo más exactos que las placas fotográficas de 1919.</span>
-            <span class="t-en">More than a century later, our team is repeating a modern version of the experiment: photographing stars within 2 solar radii of the limb during totality, and comparing their apparent positions against precision astrometric catalogs — like Gaia — far more accurate than the 1919 photographic plates.</span><span class="t-lv">Vairāk nekā gadsimtu vēlāk mūsu komanda atkārto mūsdienīgu eksperimenta versiju: fotografējot zvaigznes mazāk nekā 2 Saules rādiusu attālumā no malas pilnīgās fāzes laikā un salīdzinot to šķietamo novietojumu ar precīziem astrometriskiem katalogiem — piemēram, Gaia —, kas ir daudz precīzāki par 1919. gada fotoplatēm.</span>
+            <span class="t-es">Más de un siglo después, nuestro equipo repite una versión moderna del experimento: fotografiando estrellas a menos de 2 radios solares del borde durante la totalidad, y comparando sus posiciones aparentes con catálogos astrométricos de precisión —como Gaia— muchísimo más exactos que las placas fotográficas de 1919. Además, vamos a usar modelos de la corona en luz blanca para restarla de las imágenes — esto permite revelar estrellas más tenues, muy cercanas al borde solar, que de otra forma quedarían ocultas por el brillo de la corona, y obtener así mediciones más precisas de la desviación gravitacional.</span>
+            <span class="t-en">More than a century later, our team is repeating a modern version of the experiment: photographing stars within 2 solar radii of the limb during totality, and comparing their apparent positions against precision astrometric catalogs — like Gaia — far more accurate than the 1919 photographic plates. We will also use white-light corona models to subtract the corona from the images — this reveals fainter stars very close to the solar limb that would otherwise be hidden by the corona's brightness, yielding more precise measurements of the gravitational deflection.</span>
           </p>
         </div>
         <div>
           <table class="star-table">
             <thead>
               <tr>
-                <th><span class="t-es">Estrella</span><span class="t-en">Star</span><span class="t-lv">Zvaigzne</span></th>
-                <th><span class="t-es">Magnitud</span><span class="t-en">Magnitude</span><span class="t-lv">Magnitūda</span></th>
-                <th><span class="t-es">Distancia (ρ)</span><span class="t-en">Distance (ρ)</span><span class="t-lv">Attālums (ρ)</span></th>
-                <th><span class="t-es">Deflexión RG</span><span class="t-en">GR deflection</span><span class="t-lv">GR novirze</span></th>
+                <th><span class="t-es">Estrella</span><span class="t-en">Star</span></th>
+                <th><span class="t-es">Magnitud</span><span class="t-en">Magnitude</span></th>
+                <th><span class="t-es">Distancia (ρ)</span><span class="t-en">Distance (ρ)</span></th>
+                <th><span class="t-es">Deflexión RG</span><span class="t-en">GR deflection</span></th>
               </tr>
             </thead>
             <tbody>
@@ -606,7 +604,7 @@
           </table>
           <p style="font-family:'IBM Plex Mono',monospace;font-size:0.72rem;color:var(--umbra);margin-top:16px;">
             <span class="t-es">Candidatos estelares identificados para la campaña · deflexión calculada según Δθ ≈ 1.7512″ / ρ</span>
-            <span class="t-en">Stellar candidates identified for the campaign · deflection computed as Δθ ≈ 1.7512″ / ρ</span><span class="t-lv">Kampaņai identificētie zvaigžņu kandidāti · novirze aprēķināta pēc Δθ ≈ 1.7512″ / ρ</span>
+            <span class="t-en">Stellar candidates identified for the campaign · deflection computed as Δθ ≈ 1.7512″ / ρ</span>
           </p>
         </div>
       </div>
@@ -617,12 +615,12 @@
   <section>
     <div class="wrap">
       <div class="section-head">
-        <span class="label">05 — <span class="t-es">La capa invisible</span><span class="t-en">The invisible layer</span><span class="t-lv">Neredzamais slānis</span></span>
+        <span class="label">05 — <span class="t-es">La capa invisible</span><span class="t-en">The invisible layer</span></span>
         <div>
-          <h2><span class="t-es">Lo que le pasa a la ionosfera — y a tu GPS</span><span class="t-en">What happens to the ionosphere — and your GPS</span><span class="t-lv">Kas notiek ar jonosfēru — un ar tavu GPS</span></h2>
+          <h2><span class="t-es">Lo que le pasa a la ionosfera — y a tu GPS</span><span class="t-en">What happens to the ionosphere — and your GPS</span></h2>
           <p class="section-intro">
             <span class="t-es">La caída súbita de radiación solar durante el eclipse también afecta una capa alta de la atmósfera que usamos todos los días sin saberlo.</span>
-            <span class="t-en">The sudden drop in solar radiation during the eclipse also disturbs a high atmospheric layer we rely on every day without realizing it.</span><span class="t-lv">Pēkšņais Saules starojuma kritums aptumsuma laikā ietekmē arī augstu atmosfēras slāni, ko mēs izmantojam katru dienu, to neapzinoties.</span>
+            <span class="t-en">The sudden drop in solar radiation during the eclipse also disturbs a high atmospheric layer we rely on every day without realizing it.</span>
           </p>
         </div>
       </div>
@@ -630,18 +628,18 @@
       <div class="ion-grid">
         <div class="ion-card">
           <span class="ic-num">/ 01</span>
-          <h3><span class="t-es">La ionosfera</span><span class="t-en">The ionosphere</span><span class="t-lv">Jonosfēra</span></h3>
-          <p><span class="t-es">Una capa de la atmósfera cargada eléctricamente por la radiación solar, que refleja y modifica las ondas de radio.</span><span class="t-en">An atmospheric layer electrically charged by solar radiation, which reflects and alters radio waves.</span><span class="t-lv">Atmosfēras slānis, ko Saules starojums elektriski uzlādē un kas atstaro un maina radioviļņus.</span></p>
+          <h3><span class="t-es">La ionosfera</span><span class="t-en">The ionosphere</span></h3>
+          <p><span class="t-es">Una capa de la atmósfera cargada eléctricamente por la radiación solar. Son precisamente los electrones libres de esta capa los que reflejan y modifican las ondas de radio, permitiendo su propagación.</span><span class="t-en">An atmospheric layer electrically charged by solar radiation. It's precisely the free electrons in this layer that reflect and alter radio waves, enabling their propagation.</span></p>
         </div>
         <div class="ion-card">
           <span class="ic-num">/ 02</span>
-          <h3><span class="t-es">Observaciones de radio</span><span class="t-en">Radio observations</span><span class="t-lv">Radio novērojumi</span></h3>
-          <p><span class="t-es">Receptores de radio monitorean la propagación de señales antes, durante y después del eclipse — con un día de control antes y después para comparar.</span><span class="t-en">Radio receivers track signal propagation before, during and after the eclipse — with a control day before and after for comparison.</span><span class="t-lv">Radio uztvērēji seko signālu izplatībai pirms, aptumsuma laikā un pēc tā — ar kontroles dienām pirms un pēc, lai varētu salīdzināt.</span></p>
+          <h3><span class="t-es">Observaciones de radio</span><span class="t-en">Radio observations</span></h3>
+          <p><span class="t-es">Receptores de radio monitorean la propagación de señales antes, durante y después del eclipse — con un día de control antes y después para comparar.</span><span class="t-en">Radio receivers track signal propagation before, during and after the eclipse — with a control day before and after for comparison.</span></p>
         </div>
         <div class="ion-card">
           <span class="ic-num">/ 03</span>
-          <h3><span class="t-es">GPS en tu bolsillo</span><span class="t-en">GPS in your pocket</span><span class="t-lv">GPS tavā kabatā</span></h3>
-          <p><span class="t-es">Los mismos cambios pueden introducir pequeños errores en el posicionamiento GPS de un teléfono móvil — el público puede participar registrando su propia ruta.</span><span class="t-en">These same changes can introduce small GPS positioning errors on a mobile phone — the public can take part by logging their own track.</span><span class="t-lv">Tās pašas izmaiņas var radīt nelielas kļūdas mobilā tālruņa GPS pozicionēšanā — ikviens var piedalīties, reģistrējot savu maršrutu.</span></p>
+          <h3><span class="t-es">GPS en tu bolsillo</span><span class="t-en">GPS in your pocket</span></h3>
+          <p><span class="t-es">Los mismos cambios pueden introducir pequeños errores en el posicionamiento GPS de un teléfono móvil — el público puede participar registrando su propia ruta.</span><span class="t-en">These same changes can introduce small GPS positioning errors on a mobile phone — the public can take part by logging their own track.</span></p>
         </div>
       </div>
     </div>
@@ -651,13 +649,13 @@
   <section id="gps">
     <div class="wrap">
       <div class="section-head">
-        <span class="label">06 — <span class="t-es">Ciencia ciudadana</span><span class="t-en">Citizen science</span><span class="t-lv">Pilsoņu zinātne</span></span>
+        <span class="label">06 — <span class="t-es">Ciencia ciudadana</span><span class="t-en">Citizen science</span></span>
         <div>
-          <h2><span class="t-es">Mide el eclipse con tu teléfono</span><span class="t-en">Measure the eclipse with your phone</span><span class="t-lv">Mēri aptumsumu ar savu tālruni</span></h2>
+          <h2><span class="t-es">Mide el eclipse con tu teléfono</span><span class="t-en">Measure the eclipse with your phone</span></h2>
           <p class="section-intro">
             <span class="t-es">Súmate al experimento GPS: tu teléfono puede detectar el mismo cambio ionosférico que acabas de leer arriba. Así de simple.</span>
             <span class="t-en">Join the GPS experiment: your phone can detect the very ionospheric change you just read about above. It's that simple.</span>
-            <span class="t-lv">Pievienojies GPS eksperimentam: tavs tālrunis var atklāt tieši to pašu jonosfēras izmaiņu, par kuru tikko lasīji augstāk. Tik vienkārši.</span>
+            
           </p>
         </div>
       </div>
@@ -669,101 +667,101 @@
         <div class="video-caption">
           <span class="t-es">▶ Cómo el GPS usa señales del espacio — la base de todo el experimento</span>
           <span class="t-en">▶ How GPS uses signals from space — the basis of the whole experiment</span>
-          <span class="t-lv">▶ Kā GPS izmanto signālus no kosmosa — visa eksperimenta pamats</span>
+          
         </div>
       </div>
 
       <div class="gps-qr-row">
         <div class="gps-qr-box"><img src="data:image/jpeg;base64,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88ogAcssMUww4EYo880YU888884QwgEwAcww8AMc4YcwU88888oE8AQ884oU8Q8wAo88U888884Q0Qwg8sEIcEIM8ccoc88888sMsoU88UoEs888sIAcU8888888QoMg0IM4Q84U8gU4U88888sc8csoIUg8g8wEMIcwU888884wwwwoU48oU0IU4o88U88888o8w0oo8Mws8wgQwgc4U88888o8AUo8IAQ8coU88cAA888888o8Mco88MMI0AEE80EIU88888sMMMM8c8sMs8ccsscs8888888888888888888888888888888888888888888888888888888888888888888888888888/9oADAMBAAIAAwAAABDzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzjDDDDzDDjDzDTTjDDDTzzzzyjzzwiwhTzzwCDyjzzxTzzzzyjwBSjzwTjxQwxyigBRTzzzzyjwxyjhTgTzgBjyiwxxTzzzzyhDDAChzRTihjTSjDDBTzzzzzzzzDCRTwjywxBTjTzjzzzzzyjxRTwjTwwyzhSgQwgRTzzzzyiAByywxTDDgRijzzRhTzzzzzhDCATABzDDwAxzhhzBTzzzzygTwBDzzihTxDzACjzxTzzzzzhDRDCDywQhwQgzxxyhzzzzzywyyhTzxSgSzzzywgBxTzzzzzzxCgyDQgzhDzhTyBThTzzzzyxzxyyghSDyDzAQwhzBTzzzzzjDDDChTjyhTQhTijzxTzzzzyjzDSijwzCzzCBDCBzhTzzzzyjwBSjwgBDxyhTzxwADzzzzzyjwxyjzwwwjQAQTzQQhTzzzzywwwwzxzywyzxxyyxyzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz/xAAUEQEAAAAAAAAAAAAAAAAAAACQ/9oACAECAQE/ABA//8QAFBEBAAAAAAAAAAAAAAAAAAAAkP/aAAgBAwEBPwAQP//EAD0QAAABBwgGCgMAAgMBAQAAAAMAAQIEBRESExU1VIKistEQFiExZKMGFCAwQUJEUcHhI3GBJCU2QJFwUP/aAAgBAQABPwL/AO8MSlwLWE+lt0uPZwm7LbpcezhNoYlLgWsJ9LbpcezhNoYlLgWsJ9LE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" alt="QR Geo Tracker"></div>
         <div>
-          <div class="gps-qr-k"><span class="t-es">Escanea para descargar</span><span class="t-en">Scan to download</span><span class="t-lv">Skenē, lai lejupielādētu</span></div>
+          <div class="gps-qr-k"><span class="t-es">Escanea para descargar</span><span class="t-en">Scan to download</span></div>
           <div class="gps-qr-v">Geo Tracker — GPS Tracker</div>
-          <div class="gps-qr-app"><span class="t-es">Gratis · funciona sin conexión · iOS y Android</span><span class="t-en">Free · works offline · iOS and Android</span><span class="t-lv">Bezmaksas · darbojas bez interneta · iOS un Android</span></div>
+          <div class="gps-qr-app"><span class="t-es">Gratis · funciona sin conexión · iOS y Android</span><span class="t-en">Free · works offline · iOS and Android</span></div>
         </div>
       </div>
 
-      <h3 style="margin-top:44px;margin-bottom:6px;font-size:1.2rem;"><span class="t-es">Los 5 días de medición</span><span class="t-en">The 5 days of measurement</span><span class="t-lv">5 mērīšanas dienas</span></h3>
+      <h3 style="margin-top:44px;margin-bottom:6px;font-size:1.2rem;"><span class="t-es">Los 5 días de medición</span><span class="t-en">The 5 days of measurement</span></h3>
       <p class="section-intro" style="margin-bottom:24px;">
         <span class="t-es">Grabamos la misma ventana horaria en cinco días distintos —dos antes y dos después del eclipse— para comparar el día del eclipse contra una línea base sólida.</span>
         <span class="t-en">We record the same time window on five different days — two before and two after the eclipse — so we can compare eclipse day against a solid baseline.</span>
-        <span class="t-lv">Mēs ierakstām to pašu laika logu piecās dažādās dienās — divas pirms un divas pēc aptumsuma —, lai varētu salīdzināt aptumsuma dienu ar drošu bāzes līniju.</span>
+        
       </p>
 
       <div class="timeline">
         <div class="tl-item">
-          <div class="tl-tag"><span class="t-es">Día -2 · Referencia</span><span class="t-en">Day -2 · Baseline</span><span class="t-lv">-2. diena · Bāzes līnija</span></div>
+          <div class="tl-tag"><span class="t-es">Día -2 · Referencia</span><span class="t-en">Day -2 · Baseline</span></div>
           <div>
-            <h3><span class="t-es">Lunes 10 de agosto</span><span class="t-en">Monday, August 10</span><span class="t-lv">Pirmdiena, 10. augusts</span></h3>
-            <p><span class="t-es">Un día normal, sin eclipse — primer punto de nuestra línea base.</span><span class="t-en">A normal day, no eclipse — the first point of our baseline.</span><span class="t-lv">Parasta diena bez aptumsuma — pirmais mūsu bāzes līnijas punkts.</span></p>
+            <h3><span class="t-es">Lunes 10 de agosto</span><span class="t-en">Monday, August 10</span></h3>
+            <p><span class="t-es">Un día normal, sin eclipse — primer punto de nuestra línea base.</span><span class="t-en">A normal day, no eclipse — the first point of our baseline.</span></p>
             <span class="time-chip">19:00 – 21:00 CEST</span>
           </div>
         </div>
         <div class="tl-item">
-          <div class="tl-tag"><span class="t-es">Día -1 · Referencia</span><span class="t-en">Day -1 · Baseline</span><span class="t-lv">-1. diena · Bāzes līnija</span></div>
+          <div class="tl-tag"><span class="t-es">Día -1 · Referencia</span><span class="t-en">Day -1 · Baseline</span></div>
           <div>
-            <h3><span class="t-es">Martes 11 de agosto</span><span class="t-en">Tuesday, August 11</span><span class="t-lv">Otrdiena, 11. augusts</span></h3>
-            <p><span class="t-es">Segundo día normal, sin eclipse — refuerza la línea base antes del evento.</span><span class="t-en">Second normal day, no eclipse — reinforces the baseline before the event.</span><span class="t-lv">Otrā parastā diena bez aptumsuma — nostiprina bāzes līniju pirms notikuma.</span></p>
+            <h3><span class="t-es">Martes 11 de agosto</span><span class="t-en">Tuesday, August 11</span></h3>
+            <p><span class="t-es">Segundo día normal, sin eclipse — refuerza la línea base antes del evento.</span><span class="t-en">Second normal day, no eclipse — reinforces the baseline before the event.</span></p>
             <span class="time-chip">19:00 – 21:00 CEST</span>
           </div>
         </div>
         <div class="tl-item totality">
-          <div class="tl-tag"><span class="t-es">Día 0 · Eclipse</span><span class="t-en">Day 0 · Eclipse</span><span class="t-lv">0. diena · Aptumsums</span></div>
+          <div class="tl-tag"><span class="t-es">Día 0 · Eclipse</span><span class="t-en">Day 0 · Eclipse</span></div>
           <div>
-            <h3><span class="t-es">Miércoles 12 de agosto — Día del eclipse</span><span class="t-en">Wednesday, August 12 — Eclipse day</span><span class="t-lv">Trešdiena, 12. augusts — Aptumsuma diena</span></h3>
-            <p><span class="t-es">Misma ventana horaria, pero hoy el Sol se oculta de verdad.</span><span class="t-en">Same time window, but today the Sun actually goes dark.</span><span class="t-lv">Tas pats laika logs, bet šodien Saule tiešām paslēpsies.</span></p>
+            <h3><span class="t-es">Miércoles 12 de agosto — Día del eclipse</span><span class="t-en">Wednesday, August 12 — Eclipse day</span></h3>
+            <p><span class="t-es">Misma ventana horaria, pero hoy el Sol se oculta de verdad.</span><span class="t-en">Same time window, but today the Sun actually goes dark.</span></p>
             <span class="time-chip" style="background:var(--ember);color:#0B0B0B;border-color:var(--ember);font-weight:600;">19:00 – 21:00 CEST</span>
-            <p style="font-family:'IBM Plex Mono',monospace;font-size:0.78rem;color:var(--ember);margin-top:8px;font-weight:600;">⏱ <span class="t-es">Totalidad exacta: 20:28 – 20:31 CEST</span><span class="t-en">Exact totality: 20:28 – 20:31 CEST</span><span class="t-lv">Precīza pilnīgā fāze: 20:28–20:31 (CEST)</span></p>
+            <p style="font-family:'IBM Plex Mono',monospace;font-size:0.78rem;color:var(--ember);margin-top:8px;font-weight:600;">⏱ <span class="t-es">Totalidad exacta: 20:28 – 20:31 CEST</span><span class="t-en">Exact totality: 20:28 – 20:31 CEST</span></p>
           </div>
         </div>
         <div class="tl-item">
-          <div class="tl-tag"><span class="t-es">Día +1 · Referencia</span><span class="t-en">Day +1 · Baseline</span><span class="t-lv">+1. diena · Bāzes līnija</span></div>
+          <div class="tl-tag"><span class="t-es">Día +1 · Referencia</span><span class="t-en">Day +1 · Baseline</span></div>
           <div>
-            <h3><span class="t-es">Jueves 13 de agosto</span><span class="t-en">Thursday, August 13</span><span class="t-lv">Ceturtdiena, 13. augusts</span></h3>
-            <p><span class="t-es">Primer día normal después del eclipse — confirma que todo vuelve a la normalidad.</span><span class="t-en">First normal day after the eclipse — confirms everything returns to normal.</span><span class="t-lv">Pirmā parastā diena pēc aptumsuma — apstiprina, ka viss atgriežas normālā stāvoklī.</span></p>
+            <h3><span class="t-es">Jueves 13 de agosto</span><span class="t-en">Thursday, August 13</span></h3>
+            <p><span class="t-es">Primer día normal después del eclipse — confirma que todo vuelve a la normalidad.</span><span class="t-en">First normal day after the eclipse — confirms everything returns to normal.</span></p>
             <span class="time-chip">19:00 – 21:00 CEST</span>
           </div>
         </div>
         <div class="tl-item">
-          <div class="tl-tag"><span class="t-es">Día +2 · Referencia</span><span class="t-en">Day +2 · Baseline</span><span class="t-lv">+2. diena · Bāzes līnija</span></div>
+          <div class="tl-tag"><span class="t-es">Día +2 · Referencia</span><span class="t-en">Day +2 · Baseline</span></div>
           <div>
-            <h3><span class="t-es">Viernes 14 de agosto</span><span class="t-en">Friday, August 14</span><span class="t-lv">Piektdiena, 14. augusts</span></h3>
-            <p><span class="t-es">Segundo día normal después del eclipse — muestra más grande, resultado más sólido.</span><span class="t-en">Second normal day after the eclipse — bigger sample, stronger result.</span><span class="t-lv">Otrā parastā diena pēc aptumsuma — lielāks paraugs, drošāks rezultāts.</span></p>
+            <h3><span class="t-es">Viernes 14 de agosto</span><span class="t-en">Friday, August 14</span></h3>
+            <p><span class="t-es">Segundo día normal después del eclipse — muestra más grande, resultado más sólido.</span><span class="t-en">Second normal day after the eclipse — bigger sample, stronger result.</span></p>
             <span class="time-chip">19:00 – 21:00 CEST</span>
           </div>
         </div>
       </div>
 
-      <h3 style="margin-top:44px;margin-bottom:6px;font-size:1.2rem;"><span class="t-es">4 pasos, cada uno de los 5 días</span><span class="t-en">4 steps, each of the 5 days</span><span class="t-lv">4 soļi katrā no 5 dienām</span></h3>
+      <h3 style="margin-top:44px;margin-bottom:6px;font-size:1.2rem;"><span class="t-es">4 pasos, cada uno de los 5 días</span><span class="t-en">4 steps, each of the 5 days</span></h3>
       <div class="gps-steps">
         <div class="gps-step">
           <div class="gsnum">1</div>
           <div>
-            <h3><span class="t-es">Escanea el QR y descarga Geo Tracker</span><span class="t-en">Scan the QR and download Geo Tracker</span><span class="t-lv">Skenē QR kodu un lejupielādē Geo Tracker</span></h3>
-            <p><span class="t-es">Es gratis y funciona sin conexión — solo necesita señal GPS. Solo hace falta instalarla una vez.</span><span class="t-en">It's free and works offline — it only needs GPS signal. You only need to install it once.</span><span class="t-lv">Tā ir bezmaksas un darbojas bez interneta — nepieciešams tikai GPS signāls. Instalēt vajag tikai vienreiz.</span></p>
+            <h3><span class="t-es">Escanea el QR y descarga Geo Tracker</span><span class="t-en">Scan the QR and download Geo Tracker</span></h3>
+            <p><span class="t-es">Es gratis y funciona sin conexión — solo necesita señal GPS. Solo hace falta instalarla una vez.</span><span class="t-en">It's free and works offline — it only needs GPS signal. You only need to install it once.</span></p>
           </div>
         </div>
         <div class="gps-step">
           <div class="gsnum">2</div>
           <div>
-            <h3><span class="t-es">Quédate quieto, en el mismo lugar si puedes</span><span class="t-en">Stay still, in the same spot if you can</span><span class="t-lv">Paliec nekustīgs, ja iespējams, vienā vietā</span></h3>
-            <p><span class="t-es">Apoya el teléfono en el suelo, una mesa o una mochila y no lo muevas durante las 2 horas. Cualquier desplazamiento arruina el dato — esta es la parte más importante.</span><span class="t-en">Rest your phone on the ground, a table, or a backpack, and don't move it for the full 2 hours. Any movement ruins the data — this is the most important part.</span><span class="t-lv">Nolieciet tālruni uz zemes, galda vai mugursomas un nekustiniet to visas 2 stundas. Jebkura kustība sabojā datus — šī ir vissvarīgākā daļa.</span></p>
+            <h3><span class="t-es">Quédate quieto, en el mismo lugar si puedes</span><span class="t-en">Stay still, in the same spot if you can</span></h3>
+            <p><span class="t-es">Apoya el teléfono en el suelo, una mesa o una mochila y no lo muevas durante las 2 horas. Cualquier desplazamiento arruina el dato — esta es la parte más importante.</span><span class="t-en">Rest your phone on the ground, a table, or a backpack, and don't move it for the full 2 hours. Any movement ruins the data — this is the most important part.</span></p>
           </div>
         </div>
         <div class="gps-step">
           <div class="gsnum">3</div>
           <div>
-            <h3><span class="t-es">Inicia el registro justo a las 19:00 CEST</span><span class="t-en">Start recording right at 19:00 CEST</span><span class="t-lv">Sāc ierakstu tieši plkst. 19:00 (CEST)</span></h3>
-            <p><span class="t-es">Y déjalo grabando sin tocarlo hasta las 21:00 CEST — dos horas completas, sin interrupciones.</span><span class="t-en">And leave it recording without touching it until 21:00 CEST — two full hours, no interruptions.</span><span class="t-lv">Un ļauj tam ierakstīt, to neaizskarot, līdz plkst. 21:00 (CEST) — pilnas divas stundas bez pārtraukumiem.</span></p>
+            <h3><span class="t-es">Inicia el registro justo a las 19:00 CEST</span><span class="t-en">Start recording right at 19:00 CEST</span></h3>
+            <p><span class="t-es">Y déjalo grabando sin tocarlo hasta las 21:00 CEST — dos horas completas, sin interrupciones.</span><span class="t-en">And leave it recording without touching it until 21:00 CEST — two full hours, no interruptions.</span></p>
           </div>
         </div>
         <div class="gps-step">
           <div class="gsnum">4</div>
           <div>
-            <h3><span class="t-es">A las 21:00, detén y envía el archivo en formato GPX</span><span class="t-en">At 21:00, stop and send the file in GPX format</span><span class="t-lv">Plkst. 21:00 apturi un nosūti failu GPX formātā</span></h3>
+            <h3><span class="t-es">A las 21:00, detén y envía el archivo en formato GPX</span><span class="t-en">At 21:00, stop and send the file in GPX format</span></h3>
             <p>
               <span class="t-es">Exporta el track y envíalo a <strong style="color:var(--corona);">eklipsegps@gmail.com</strong>, nombrando el archivo con la fecha (ej. "GPX_10agosto.gpx"...) para identificar cada día sin confusión.</span>
               <span class="t-en">Export the track and send it to <strong style="color:var(--corona);">eklipsegps@gmail.com</strong>, naming the file with the date (e.g. "GPX_Aug10.gpx"...) so we can identify each day without confusion.</span>
-              <span class="t-lv">Eksportē maršrutu un nosūti to uz <strong style="color:var(--corona);">eklipsegps@gmail.com</strong>, faila nosaukumā norādot datumu (piem., "GPX_10agosto.gpx"...), lai katru dienu varētu viegli atpazīt.</span>
+              
             </p>
           </div>
         </div>
@@ -775,18 +773,18 @@
   <section id="seguridad" class="alt-bg">
     <div class="wrap">
       <div class="safety">
-        <span class="icon-label">⚠ <span class="t-es">Lectura obligatoria</span><span class="t-en">Required reading</span><span class="t-lv">Obligāti izlasāms</span></span>
-        <h2><span class="t-es">Cómo observar el eclipse sin dañar tu vista</span><span class="t-en">How to watch the eclipse without harming your eyes</span><span class="t-lv">Kā vērot aptumsumu, nekaitējot redzei</span></h2>
+        <span class="icon-label">⚠ <span class="t-es">Lectura obligatoria</span><span class="t-en">Required reading</span></span>
+        <h2><span class="t-es">Cómo observar el eclipse sin dañar tu vista</span><span class="t-en">How to watch the eclipse without harming your eyes</span></h2>
         <div class="safety-grid">
           <ul>
-            <li><span class="t-es">Nunca mires al Sol directamente sin gafas certificadas <strong>ISO 12312-2</strong>, excepto durante el minuto exacto de totalidad total.</span><span class="t-en">Never look directly at the Sun without <strong>ISO 12312-2</strong> certified glasses, except during the exact minute of totality.</span><span class="t-lv">Nekad neskaties tieši uz Sauli bez sertificētām <strong>ISO 12312-2</strong> brillēm, izņemot tieši to minūti, kad ir pilnīgā fāze.</span></li>
-            <li><span class="t-es">Las gafas de sol normales <strong>no sirven</strong>, sin importar cuán oscuras parezcan.</span><span class="t-en">Regular sunglasses <strong>do not work</strong>, no matter how dark they look.</span><span class="t-lv">Parastas saulesbrilles <strong>nederēs</strong>, lai cik tumšas tās izskatītos.</span></li>
-            <li><span class="t-es">Cuidado con las gafas falsificadas — compra solo a vendedores de confianza o sociedades astronómicas.</span><span class="t-en">Watch out for counterfeit glasses — buy only from trusted sellers or astronomical societies.</span><span class="t-lv">Uzmanies no viltotām brillēm — pērc tikai no uzticamiem pārdevējiem vai astronomijas biedrībām.</span></li>
+            <li><span class="t-es">Nunca mires al Sol directamente sin gafas certificadas <strong>ISO 12312-2</strong>, excepto durante el minuto exacto de totalidad total.</span><span class="t-en">Never look directly at the Sun without <strong>ISO 12312-2</strong> certified glasses, except during the exact minute of totality.</span></li>
+            <li><span class="t-es">Las gafas de sol normales <strong>no sirven</strong>, sin importar cuán oscuras parezcan.</span><span class="t-en">Regular sunglasses <strong>do not work</strong>, no matter how dark they look.</span></li>
+            <li><span class="t-es">Cuidado con las gafas falsificadas — compra solo a vendedores de confianza o sociedades astronómicas.</span><span class="t-en">Watch out for counterfeit glasses — buy only from trusted sellers or astronomical societies.</span></li>
           </ul>
           <ul>
-            <li><span class="t-es">Supervisa siempre a los menores durante la observación.</span><span class="t-en">Always supervise children during observation.</span><span class="t-lv">Vienmēr uzraugi bērnus novērošanas laikā.</span></li>
-            <li><span class="t-es">La proyección solar con filtro es una alternativa segura para ver la fase parcial.</span><span class="t-en">Solar projection with a filter is a safe alternative for viewing the partial phase.</span><span class="t-lv">Saules projekcija ar filtru ir droša alternatīva daļējās fāzes vērošanai.</span></li>
-            <li><span class="t-es">El equipo científico avisará en voz alta cuándo es seguro quitarse y volver a ponerse la protección.</span><span class="t-en">The science team will call out loud when it's safe to remove and re-apply eye protection.</span><span class="t-lv">Zinātniskā komanda skaļi paziņos, kad ir droši noņemt un atkal uzlikt acu aizsardzību.</span></li>
+            <li><span class="t-es">Supervisa siempre a los menores durante la observación.</span><span class="t-en">Always supervise children during observation.</span></li>
+            <li><span class="t-es">La proyección solar con filtro es una alternativa segura para ver la fase parcial.</span><span class="t-en">Solar projection with a filter is a safe alternative for viewing the partial phase.</span></li>
+            <li><span class="t-es">El equipo científico avisará en voz alta cuándo es seguro quitarse y volver a ponerse la protección.</span><span class="t-en">The science team will call out loud when it's safe to remove and re-apply eye protection.</span></li>
           </ul>
         </div>
       </div>
@@ -797,12 +795,12 @@
   <section id="experimentos">
     <div class="wrap">
       <div class="section-head">
-        <span class="label">07 — <span class="t-es">La campaña</span><span class="t-en">The campaign</span><span class="t-lv">Kampaņa</span></span>
+        <span class="label">07 — <span class="t-es">La campaña</span><span class="t-en">The campaign</span></span>
         <div>
-          <h2><span class="t-es">Seis experimentos, un minuto de totalidad</span><span class="t-en">Six experiments, one minute of totality</span><span class="t-lv">Seši eksperimenti, viena pilnīgās fāzes minūte</span></h2>
+          <h2><span class="t-es">Seis experimentos, un minuto de totalidad</span><span class="t-en">Six experiments, one minute of totality</span></h2>
           <p class="section-intro">
             <span class="t-es">El equipo científico va a correr estos experimentos en paralelo durante la totalidad. Cada uno mide algo distinto del Sol, la atmósfera o el espacio-tiempo mismo.</span>
-            <span class="t-en">The science team will run these experiments in parallel during totality. Each one measures something different — the Sun, the atmosphere, or spacetime itself.</span><span class="t-lv">Zinātniskā komanda pilnīgās fāzes laikā paralēli veiks šos eksperimentus. Katrs no tiem mēra kaut ko citu — Sauli, atmosfēru vai pašu laiktelpu.</span>
+            <span class="t-en">The science team will run these experiments in parallel during totality. Each one measures something different — the Sun, the atmosphere, or spacetime itself.</span>
           </p>
         </div>
       </div>
@@ -811,50 +809,50 @@
       <div class="exp-card">
         <span class="ex-idx">01 / 06</span>
         <div>
-          <h3><span class="t-es">Imagen de luz blanca</span><span class="t-en">White light imaging</span><span class="t-lv">Baltās gaismas attēlveidošana</span></h3>
-          <p><span class="t-es">Alta resolución y campo amplio de la corona solar, para reconstruir su estructura.</span><span class="t-en">High-resolution and wide-field imaging of the solar corona, to reconstruct its structure.</span><span class="t-lv">Augstas izšķirtspējas un plaša skata Saules koronas attēli, lai atjaunotu tās struktūru.</span></p>
+          <h3><span class="t-es">Imagen de luz blanca</span><span class="t-en">White light imaging</span></h3>
+          <p><span class="t-es">Alta resolución y campo amplio de la corona solar, para reconstruir su estructura.</span><span class="t-en">High-resolution and wide-field imaging of the solar corona, to reconstruct its structure.</span></p>
         </div>
-        <div class="ex-lead"><span class="t-es">Corona · plasma</span><span class="t-en">Corona · plasma</span><span class="t-lv">Korona · plazma</span></div>
+        <div class="ex-lead"><span class="t-es">Corona · plasma</span><span class="t-en">Corona · plasma</span></div>
       </div>
       <div class="exp-card">
         <span class="ex-idx">02 / 06</span>
         <div>
-          <h3><span class="t-es">Experimento Eddington-Einstein</span><span class="t-en">Eddington-Einstein experiment</span><span class="t-lv">Eddington-Einstein eksperiments</span></h3>
-          <p><span class="t-es">Astrometría de estrellas cercanas al Sol para medir la deflexión gravitacional de la luz.</span><span class="t-en">Astrometry of stars near the Sun to measure the gravitational deflection of light.</span><span class="t-lv">Zvaigžņu, kas atrodas tuvu Saulei, astrometrija, lai mērītu gaismas gravitācijas novirzi.</span></p>
+          <h3><span class="t-es">Experimento Eddington-Einstein</span><span class="t-en">Eddington-Einstein experiment</span></h3>
+          <p><span class="t-es">Astrometría de estrellas cercanas al Sol para medir la deflexión gravitacional de la luz.</span><span class="t-en">Astrometry of stars near the Sun to measure the gravitational deflection of light.</span></p>
         </div>
-        <div class="ex-lead"><span class="t-es">Relatividad general</span><span class="t-en">General relativity</span><span class="t-lv">Vispārīgā relativitāte</span></div>
+        <div class="ex-lead"><span class="t-es">Relatividad general</span><span class="t-en">General relativity</span></div>
       </div>
       <div class="exp-card">
         <span class="ex-idx">03 / 06</span>
         <div>
-          <h3><span class="t-es">Espectroscopía del cielo</span><span class="t-en">Whole-sky spectroscopy</span><span class="t-lv">Debess spektroskopija</span></h3>
-          <p><span class="t-es">Captura automatizada del "flash espectral" cromosférico en los contactos 2 y 3.</span><span class="t-en">Automated capture of the chromospheric "flash spectrum" at second and third contact.</span><span class="t-lv">Automatizēta hromosfēras “spektrālā uzliesmojuma” fiksēšana 2. un 3. kontakta laikā.</span></p>
+          <h3><span class="t-es">Espectroscopía del cielo</span><span class="t-en">Whole-sky spectroscopy</span></h3>
+          <p><span class="t-es">Captura automatizada del "flash espectral" cromosférico en los contactos 2 y 3.</span><span class="t-en">Automated capture of the chromospheric "flash spectrum" at second and third contact.</span></p>
         </div>
-        <div class="ex-lead"><span class="t-es">Composición química</span><span class="t-en">Chemical composition</span><span class="t-lv">Ķīmiskais sastāvs</span></div>
+        <div class="ex-lead"><span class="t-es">Composición química</span><span class="t-en">Chemical composition</span></div>
       </div>
       <div class="exp-card">
         <span class="ex-idx">04 / 06</span>
         <div>
-          <h3><span class="t-es">Observaciones de radio</span><span class="t-en">Radio observations</span><span class="t-lv">Radio novērojumi</span></h3>
-          <p><span class="t-es">Monitoreo de la propagación de señales para detectar cambios en la ionosfera.</span><span class="t-en">Signal propagation monitoring to detect ionospheric changes.</span><span class="t-lv">Signālu izplatības monitorings, lai atklātu izmaiņas jonosfērā.</span></p>
+          <h3><span class="t-es">Observaciones de radio</span><span class="t-en">Radio observations</span></h3>
+          <p><span class="t-es">Monitoreo de la propagación de señales para detectar cambios en la ionosfera.</span><span class="t-en">Signal propagation monitoring to detect ionospheric changes.</span></p>
         </div>
-        <div class="ex-lead"><span class="t-es">Ionosfera</span><span class="t-en">Ionosphere</span><span class="t-lv">Jonosfēra</span></div>
+        <div class="ex-lead"><span class="t-es">Ionosfera</span><span class="t-en">Ionosphere</span></div>
       </div>
       <div class="exp-card">
         <span class="ex-idx">05 / 06</span>
         <div>
-          <h3><span class="t-es">Experimento GPS</span><span class="t-en">GPS experiment</span><span class="t-lv">GPS eksperiments</span></h3>
-          <p><span class="t-es">Registro de posicionamiento por móvil para detectar micro-errores inducidos por el eclipse.</span><span class="t-en">Mobile positioning logs to detect eclipse-induced micro-errors.</span><span class="t-lv">Mobilā tālruņa pozicionēšanas ieraksti, lai atklātu aptumsuma izraisītas mikrokļūdas.</span></p>
+          <h3><span class="t-es">Experimento GPS</span><span class="t-en">GPS experiment</span></h3>
+          <p><span class="t-es">Registro de posicionamiento por móvil para detectar micro-errores inducidos por el eclipse.</span><span class="t-en">Mobile positioning logs to detect eclipse-induced micro-errors.</span></p>
         </div>
-        <div class="ex-lead"><span class="t-es">Ciencia ciudadana</span><span class="t-en">Citizen science</span><span class="t-lv">Pilsoņu zinātne</span></div>
+        <div class="ex-lead"><span class="t-es">Ciencia ciudadana</span><span class="t-en">Citizen science</span></div>
       </div>
       <div class="exp-card">
         <span class="ex-idx">06 / 06</span>
         <div>
-          <h3><span class="t-es">Divulgación</span><span class="t-en">Outreach</span><span class="t-lv">Zinātnes popularizēšana</span></h3>
-          <p><span class="t-es">Charlas, pósters, proyecciones solares y transmisión en vivo abiertas al público.</span><span class="t-en">Talks, posters, solar projections and live streaming, open to the public.</span><span class="t-lv">Lekcijas, plakāti, Saules projekcijas un tiešraide, atvērta publikai.</span></p>
+          <h3><span class="t-es">Divulgación</span><span class="t-en">Outreach</span></h3>
+          <p><span class="t-es">Charlas, pósters, proyecciones solares y transmisión en vivo abiertas al público.</span><span class="t-en">Talks, posters, solar projections and live streaming, open to the public.</span></p>
         </div>
-        <div class="ex-lead"><span class="t-es">Comunicación científica</span><span class="t-en">Science communication</span><span class="t-lv">Zinātnes komunikācija</span></div>
+        <div class="ex-lead"><span class="t-es">Comunicación científica</span><span class="t-en">Science communication</span></div>
       </div>
     </div>
   </section>
@@ -863,19 +861,19 @@
   <section id="evento" class="alt-bg">
     <div class="wrap event-grid">
       <div>
-        <span class="label">08 — <span class="t-es">El evento</span><span class="t-en">The event</span><span class="t-lv">Pasākums</span></span>
-        <h2 style="margin-top:14px;margin-bottom:22px;"><span class="t-es">Detalles de la observación</span><span class="t-en">Observation details</span><span class="t-lv">Novērošanas informācija</span></h2>
-        <div class="info-row"><span class="k"><span class="t-es">Fecha</span><span class="t-en">Date</span><span class="t-lv">Datums</span></span><span class="v">12 <span class="t-es">de agosto de</span><span class="t-en">August</span><span class="t-lv">augusts</span> 2026</span></div>
-        <div class="info-row"><span class="k"><span class="t-es">Ubicación</span><span class="t-en">Location</span><span class="t-lv">Atrašanās vieta</span></span><span class="v">Arguedas, Navarra — España</span></div>
-        <div class="info-row"><span class="k"><span class="t-es">Totalidad</span><span class="t-en">Totality</span><span class="t-lv">Pilnīgā fāze</span></span><span class="v">~20:28–20:31 CEST</span></div>
-        <div class="info-row"><span class="k"><span class="t-es">Duración</span><span class="t-en">Duration</span><span class="t-lv">Ilgums</span></span><span class="v">~1 <span class="t-es">min</span><span class="t-en">min</span><span class="t-lv">min</span> (<span class="t-es">Sol muy bajo, ~7° de altura</span><span class="t-en">Sun very low, ~7° altitude</span><span class="t-lv">Saule ļoti zemu, ~7° augstumā</span>)</span></div>
-        <div class="info-row"><span class="k"><span class="t-es">Actividades públicas</span><span class="t-en">Public activities</span><span class="t-lv">Publiskās aktivitātes</span></span><span class="v"><span class="t-es">Carpas, charla previa, proyecciones</span><span class="t-en">Tents, pre-talk, projections</span><span class="t-lv">Teltis, ievadlekcija, projekcijas</span></span></div>
+        <span class="label">08 — <span class="t-es">El evento</span><span class="t-en">The event</span></span>
+        <h2 style="margin-top:14px;margin-bottom:22px;"><span class="t-es">Detalles de la observación</span><span class="t-en">Observation details</span></h2>
+        <div class="info-row"><span class="k"><span class="t-es">Fecha</span><span class="t-en">Date</span></span><span class="v">12 <span class="t-es">de agosto de</span><span class="t-en">August</span> 2026</span></div>
+        <div class="info-row"><span class="k"><span class="t-es">Ubicación</span><span class="t-en">Location</span></span><span class="v">Arguedas, Navarra — España</span></div>
+        <div class="info-row"><span class="k"><span class="t-es">Totalidad</span><span class="t-en">Totality</span></span><span class="v">~20:28–20:31 CEST</span></div>
+        <div class="info-row"><span class="k"><span class="t-es">Duración</span><span class="t-en">Duration</span></span><span class="v">~1 <span class="t-es">min</span><span class="t-en">min</span> (<span class="t-es">Sol muy bajo, ~7° de altura</span><span class="t-en">Sun very low, ~7° altitude</span>)</span></div>
+        <div class="info-row"><span class="k"><span class="t-es">Actividades públicas</span><span class="t-en">Public activities</span></span><span class="v"><span class="t-es">Carpas, charla previa, proyecciones</span><span class="t-en">Tents, pre-talk, projections</span></span></div>
       </div>
 
       <div class="join-box">
-        <h3><span class="t-es">¿Quieres sumarte a la campaña?</span><span class="t-en">Want to join the campaign?</span><span class="t-lv">Vēlies pievienoties kampaņai?</span></h3>
+        <h3><span class="t-es">¿Quieres sumarte a la campaña?</span><span class="t-en">Want to join the campaign?</span></h3>
         <p><span class="t-es">Si tienes un smartphone, puedes participar en el experimento GPS de ciencia ciudadana desde cualquier punto de la franja de totalidad. Escríbenos para más información.</span>
-           <span class="t-en">If you have a smartphone, you can take part in the citizen-science GPS experiment from anywhere along the path of totality. Write to us for details.</span><span class="t-lv">Ja tev ir viedtālrunis, tu vari piedalīties GPS pilsoņu zinātnes eksperimentā no jebkuras vietas pilnīgās fāzes joslā. Raksti mums, lai uzzinātu vairāk.</span></p>
+           <span class="t-en">If you have a smartphone, you can take part in the citizen-science GPS experiment from anywhere along the path of totality. Write to us for details.</span></p>
         <span class="email-chip">eclipse-spain-2026@googlegroups.com</span>
       </div>
     </div>
@@ -886,8 +884,8 @@
 <footer>
   <div class="wrap footer-inner">
     <a href="#top" class="wordmark">TOTALIDAD<span class="dot">·</span>2026</a>
-    <span><span class="t-es">Campaña científica del Eclipse Solar Total · 12 de agosto de 2026</span><span class="t-en">Total Solar Eclipse Science Campaign · August 12, 2026</span><span class="t-lv">Pilnā Saules aptumsuma zinātniskā kampaņa · 2026. gada 12. augusts</span></span>
-    <span><span class="t-es">Una colaboración de</span><span class="t-en">A collaboration by</span><span class="t-lv">Sadarbībā ar</span> LUNEX / EuroMoonMars–ILEWG</span>
+    <span><span class="t-es">Campaña científica del Eclipse Solar Total · 12 de agosto de 2026</span><span class="t-en">Total Solar Eclipse Science Campaign · August 12, 2026</span></span>
+    <span><span class="t-es">Una colaboración de</span><span class="t-en">A collaboration by</span> LUNEX / EuroMoonMars–ILEWG</span>
   </div>
 </footer>
 
